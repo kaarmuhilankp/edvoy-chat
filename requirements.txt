@@ -1,0 +1,6 @@
+streamlit
+asyncpg
+llama_index
+openai
+python-dotenv
+llama-index-llms-openai
