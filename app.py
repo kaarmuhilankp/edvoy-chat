@@ -45,6 +45,7 @@ def query_edvoy_courses(course_payload):
           name
           globalScore
           courseDuration
+          currency
           institution {
             name
             address {
@@ -129,7 +130,9 @@ if st.button("Send Query"):
                         st.subheader("Courses")
                         for course in courses[:3]:  # Display a few courses
                             st.write(f"**Course Name:** {course['name']}")
+                            st.write(f"**Annual Fee:** {course['currency']}{course['approxAnnualFee']}")
                             st.write(f"**Institution:** {course['institution']['name']}")
+
                             st.write("---")  # Divider for clarity
 
                 # Display the raw chatbot API response in an expandable section
